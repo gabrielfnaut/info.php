@@ -2,28 +2,42 @@
 
 // + - * /
 
-$value = "2";
-$value2 = "2";
+$value = "4";
+$value2 = "4";
 $operation = "+";
 $result = 0 ;
 
 if ($operation == "+") {  
-    $result = $value + $value2 ; // 4  
+    $result = $value + $value2 ; 
 } 
 
 if ($operation == "-") {
-    $result = $value - $value2 ; // 0
+    $result = $value - $value2 ;
 }
 
 if ($operation == "/") {
-    $result = $value / $value2 ; // 1
+    $result = $value / $value2 ;
 }
 
 if ($operation == "*") {
-    $result = $value * $value2 ; // 4
+    $result = $value * $value2 ; 
 }
 
+if ($operation == "**" ) {
+    $result = $value ** $value2 ;
+}
+
+if ($operation == "%" ) {
+    $result = $value % $value2 ;
+}
+
+// verificar se um número é par (% )
+
+
+    
+
 echo $result;
+
 
 
 
