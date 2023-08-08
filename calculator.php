@@ -41,9 +41,9 @@ if ($operation == "numpar" ) {
     $par2 = $value2 % 2 ;
     $saopares = ($par == 0 && $par2 == 0) ; // true || false
 
-if ($saopares) {
-    echo "Os valores informados sãp pares.  ";
-}
+    if ($saopares) {
+        echo "Os valores informados são pares.  ";
+    }   
 }  
 
 
@@ -58,14 +58,22 @@ if ($operation == "perc+") {
 
 
 
+
 if ($operation == "mmc");
 
 
-
-
-
-
 echo $result;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
