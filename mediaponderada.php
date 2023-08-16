@@ -17,7 +17,7 @@ $mp = $numerador / $denominador;
 if ($mp >= $media ) {
     echo "O aluno foi aprovado com a média: {$mp}";
 } else {
-    echo "O aluno foi reprovado com a média: {$mp}";
+        echo "O aluno foi reprovado com a média: {$mp}";
 } 
 
 
@@ -39,7 +39,7 @@ $mp = $numerador / $denominador;
 if ($mp >= $media ) {
     echo "O aluno foi aprovado com a média: {$mp}";
 } else {
-    echo "O aluno foi reprovado com a média: {$mp}";
+        echo "O aluno foi reprovado com a média: {$mp}";
 }
 
 
