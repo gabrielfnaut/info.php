@@ -3,26 +3,26 @@
 // Calcular os números primos 
 
 
-    $numero = 709; 
-    echo "Analisando o numero: $numero <br>";
+    $numero = 11; //numero que sera verificado 
+    echo "Analisando o numero: $numero <br>";  //mensagem que aparece + variavel $numero
     $contprimos = 0; // acumulador
-    echo"Valores mútiplos: ";
+    echo"Valores mútiplos: "; // Numeros que sao multiplos do numero verificado 
    
     //Definindo laço para repetir pela quantia informada
     $a=0;
-    for ($i=1; $i<=$numero; $i++) {
+    for ($i=1; $i<=$numero; $i++) {    // loops (for)
  
-      $resto = $numero % 2;
+      $resto = $numero % 2;  //  % Atribuicao com modulo
     
-      if ($resto == 0) { 
-        break;
+      if ($resto == 0) {    
+        break;   // corte de execucao do codigo 
       }
       
-      $resto = $numero % $i;
+      $resto = $numero % $i;   //  % Atribuicao com modulo 
     
-      if ($resto != 0) { 
+      if ($resto != 0) {    // ( != Diferente de )
         $a++;
-        echo "$i ";
+        echo "$i ";  // Variavel ($i)
       }
     }
 
@@ -33,6 +33,7 @@
       echo"<br>Total de múltiplos: $a<br>";
       echo"Resultado: $numero Não é primo!";
     }
+
 
 
 
