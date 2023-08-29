@@ -53,6 +53,20 @@ $dataatual = date ('d/m/Y  H:i:s'); // 22/08/2023  20:06:32
 $acrescimos = 5;
 $horainicial = "23:00:00";
 $horafinal = "00:30:00";
+$dataentrada = new datetime ("2023-11-12 23:00:00");
+$datasaida = new datetime ("2023-11-13 00:30:00");
+
+$intervalo = $dataentrada->diff($datasaida);
+var_dump($intervalo);
+    echo $intervalo->y . " anos  " . $intervalo->m . " meses " . $intervalo->d . " dias . <br>";
+
+    echo $intervalo->days . " dias . <br>";
+    echo $datasaida-> gettimestamp() - $dataentrada->gettimestamp() . " segundos. <br>";
+    echo ($datasaida-> gettimestamp() - $dataentrada->gettimestamp()) / 60 . " minutos. <br>";    
+    echo (($datasaida-> gettimestamp() - $dataentrada->gettimestamp())) / 60 . " horas. <br>"; 
+
+
+
 
 $arrhora = explode(":", $horainicial);
 $horainicial = $arrhora [0];
@@ -66,10 +80,6 @@ $totalinicialemsegundos = $horainicialemsegundos + $minutosinicialemsegundos + $
 $datainicial = "12/11/2023";
 $datafinal = "13/11/2023";
 
-$arrdata = explode("/", $datainicial);
-$diainicial = $arrdata [0];
-$mesinicial = $arrdata [1];
-$anoinicial = $arrdata [2];
 
 
 // final
@@ -82,10 +92,6 @@ $horafinalemsegundos = $horafinal * 3600;
 $minutosfinalemsegundos = $minutosfinal * 60;
 $totalfinalemsegundos = $horafinalemsegundos + $minutosfinalemsegundos + $segundosfinal;
 
-$arrdata = explode("/", $datafinal);
-$diafinal = $arrdata [0];
-$mesfinal = $arrdata [1];
-$anofinal = $arrdata [2];
 
 
 
