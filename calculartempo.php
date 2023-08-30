@@ -53,9 +53,9 @@ $intervalo = $dataentrada->diff($datasaida);
 //var_dump($intervalo);
     echo $intervalo->y . " anos  " . $intervalo->m . " meses " . $intervalo->d . " dias . <br>";
         echo $intervalo->days . " dias . <br>";
-            echo $datasaida-> gettimestamp() - $dataentrada->gettimestamp() . " segundos. <br>";
-                echo ($datasaida-> gettimestamp() - $dataentrada->gettimestamp()) / 60 . " minutos. <br>";    
-                    echo (($datasaida-> gettimestamp() - $dataentrada->gettimestamp()) / 60 ) / 60 . " horas. <br>"; 
+            echo $datasaida->gettimestamp() - $dataentrada->gettimestamp() . " segundos. <br>";
+                echo ($datasaida->gettimestamp() - $dataentrada->gettimestamp()) / 60 . " minutos. <br>";    
+                    echo (($datasaida->gettimestamp() - $dataentrada->gettimestamp()) / 60 ) / 60 . " horas. <br>"; 
 
 // ------------------
 
