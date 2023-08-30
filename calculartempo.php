@@ -45,7 +45,7 @@ $acrescimos = 5;
 
 
 
-// Jogo comeca em um dia e termina no outro com var_dumm 
+// Jogo comeca em um dia e termina no outro com var_dump
 
 $dataentrada = new datetime ("2023-11-12 23:00:00");
 $datasaida = new datetime ("2023-11-13 00:30:00");
@@ -100,9 +100,9 @@ $totalfinalemsegundos = $horafinalemsegundos + $minutosfinalemsegundos + $segund
 // tempo de jogo
 $total = ($totalfinalemsegundos - $totalinicialemsegundos) / 60;
 if ($total <= 0) {
-    $difinicial = $diaemsegundos - $totalfinalemsegundos;
-    $total;
+    $difinicial =  $diaemsegundos - $totalinicialemsegundos;
+    $tempodojogo = ($difinicial + $totalfinalemsegundos)/60;
 }
 
-echo "o tempo de jogo é de: {$total} minutos";
+echo "o tempo de jogo é de: {$tempodojogo} minutos";
 
