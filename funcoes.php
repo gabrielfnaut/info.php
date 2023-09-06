@@ -105,7 +105,7 @@ function  moduloDivisao($valor1, $valor2 ) {
 
 function pot($valor1, $valor2) {
 
-    return pow($valor1, $valor2);
+    return pow($valor1, $valor2); // pow = potencia 
 }
 
 function numeroAnoBissextop($valor1) {
