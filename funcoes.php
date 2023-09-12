@@ -19,9 +19,9 @@ subtracao(40,30);
 // --------------------------------------------------------------------- // 
 
 //VALOR DAS VARIAVIES 
-$valor1= 10;
+$valor1= 2015;
 $valor2 = 2;
-$operador = "!!";
+$operador = "@@";
 
 //LOGICA DOS OPERADORES
 function  calcular($operador, $valor1, $valor2 ) {
@@ -70,9 +70,14 @@ function  calcular($operador, $valor1, $valor2 ) {
     }
     
     if ($operador == '@@') {
-        return numeroAnoBissextop($valor1);
+        return numeroAnoBissexto($valor1);
     }
     
+
+
+
+
+
 }
 
 //LOGICA DO CALCULO
@@ -108,12 +113,17 @@ function pot($valor1, $valor2) {
     return pow($valor1, $valor2); // pow = potencia 
 }
 
-function numeroAnoBissextop($valor1) {
-    // Logica para calcular se o ano($valor1) é bissexto
-    
+//--------------------------
+
+function numeroAnoBissexto($valor1) {
+    if (($valor1 % 4 == 0 && $valor1 % 100 != 0) || ($valor1 % 400 == 0)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-
+//--------------------------
 
 //LOGICA DO RESULTADO
 function exibirResultado($resultado) {
@@ -132,7 +142,21 @@ function exibirResultadoLogico($resultado, $valor1) {
     }
 
     echo "O numero informado({$valor1}) é {$situacao}" . "<br>";
+   
+// -----------------------
+
+
+
+    if (numeroAnoBissexto($valor1)) {
+        echo "$valor1 é um ano bissexto.<br>";
+    } else {
+        echo "$valor1 não é um ano bissexto.<br>";
+    }
+
 }
+
+//-------------------------
+
 
 function verificarTipoOperador($operador, $resultado, $valor1) {
         /*
@@ -151,6 +175,9 @@ function verificarTipoOperador($operador, $resultado, $valor1) {
     } else {
         return exibirResultado($resultado);
     }
+
+   
+ 
 }
 
 $resultado = calcular($operador, $valor1, $valor2);
