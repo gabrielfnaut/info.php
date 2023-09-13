@@ -19,12 +19,6 @@ function anoBissexto($ano) {
 }
 
 
-if (anoBissexto($ano)) {
-    echo "$dataStr é um ano bissexto" . "<br>";
-} else {
-    echo "$dataStr não é um ano bissexto" . "<br>";
-}
-
 
 //AJUSTE PARA DIAS INVALIDOS 
 if ($dia < 1 || $dia > 31) {
@@ -50,5 +44,14 @@ if (in_array($mes, $meses30dias) && $dia > 30) {
 }
 
 
+$bissextoStr = "O ano {$ano} NAO e bissexto.";
+
+if (anoBissexto($ano)) {
+    $bissextoStr = "O ano {$ano} E bissexto.";
+} 
+
+$dataStr = "{dia}/{mes}/{ano}";
+
+    echo "A data informada {$dataStr 
 
 
