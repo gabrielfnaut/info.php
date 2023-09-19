@@ -1,6 +1,6 @@
 <?php
 
-$dataStr = "42/13/2003";
+$dataStr = "29/02/2004";
 $data = explode("/", $dataStr);
 $dia = (int) $data [0];
 $mes = (int) $data [1];
@@ -50,8 +50,7 @@ if (anoBissexto($ano)) {
     $bissextoStr = "O ano {$ano} E bissexto.";
 } 
 
-$dataStr = "{dia}/{mes}/{ano}";
 
-    echo "A data informada {$dataStr 
+$dataStr = "{$dia}/{$mes}/{$ano}"; 
 
-
+echo "A data informada {$dataStr}. {$bissextoStr}";
