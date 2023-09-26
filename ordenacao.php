@@ -29,15 +29,40 @@ echo " O menor numero da array e: {$min}";
 2- por meio da tecnica de ordenacao bubble sort,
 ordene o array abaixo em ordem cerscente.
 Dica: Utilize o laco de repeticao FOR, pode ser necessario mais de um e utilizar IF
-*/
+
 
 $nums = [500, 1000, 17, 1117, 100, 32732, 1];
-
-for ($i= 0; $i < count($nums); $i++ ) {
-    if ($nums[$i] > $max) { 
-        $max = $nums[$i];   
-    }
-
-
     
+for ($i= 0; $i < count($nums); $i++ ) {
+    for ($j= 0; $j < count($nums) - 1; $j++) {
+        if($nums[$j] > $nums[$j + 1]){
+          
+            $aux = $nums[$j];
+            $nums[$j] = $nums[$j + 1];
+            $nums[$j + 1] = $aux;
+        }
+    }
+}
+
+
+echo "array crescente: {$aux} <br>"; 
+*/
+
+
+$nums = [500, 999, 17, 7, 100, 32732, 1];
+
+for ($i = 0; $i < count($nums); $i++) {
+    for ($j = 0; $j < count($nums) - 1; $j++) {
+        if ($nums[$j] > $nums[$j + 1]) {
+            
+            $aux = $nums[$j];
+            $nums[$j] = $nums[$j + 1];
+            $nums[$j + 1] = $aux;
+        }
+    }
+}
+
+echo "Array ordenado em ordem crescente: ";
+foreach ($nums as $num) {
+    echo $num . " ";
 }
