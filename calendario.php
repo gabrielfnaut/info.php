@@ -1,6 +1,6 @@
 <?php
 
-$dataStr = "19/09/2023";
+$dataStr = "19/09/1990";
 $data = explode("/", $dataStr);
 $dia = (int) $data [0];
 $mes = (int) $data [1];

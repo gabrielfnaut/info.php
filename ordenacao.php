@@ -79,3 +79,31 @@ echo "Array ordenado em ordem crescente: ";
 for ($i = 0; $i < count($nums); $i++) {
     echo $nums[$i] . ", ";
 } 
+
+echo "<br>";
+echo "<br>";
+
+//--------------------------------------------------------------------------------------------------------------------------
+//Remover os valores duplicados de um array
+
+$frutas = [
+    "maca",
+    "banana",
+    "laranja",
+    "banana",
+    "uva",
+    "maca",
+];
+
+for ($i = 0; $i < count($frutas); $i++) {
+    for ($j = 0; $j < count($frutas); $j++) {
+
+    }
+}
+
+echo "Frutas: ";
+for ($i = 0; $i < count($frutas); $i++) {
+    echo $frutas[$i] . " ";
+} 
+
+
