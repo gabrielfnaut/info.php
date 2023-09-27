@@ -3,7 +3,6 @@
 //Exibir esse valor ao final para o usuario 
 
 
-
 $nums = [500, 999, 17, 7, 100, 32732, 1, 77, 54, 277]; //array de numeros 
 $max = $nums[0];       //inicializa o maior numero com o primeiro elemento da array, ou seja: 500
 $min = $nums[0];
@@ -49,7 +48,10 @@ for ($i= 0; $i < count($nums); $i++ ) {
 
 
 echo "array crescente: {$a} <br>"; 
+  
 */
+
+
 //--------------------------------------------------------------------------------------------------
 //for | while | foreach | implode, explode || pesquisar sobre oq cada uma faz e para q serve 
 //--------------------------------------------------------------------------------------------------
@@ -95,15 +97,34 @@ $frutas = [
     "maca",
 ];
 
-for ($i = 0; $i < count($frutas); $i++) {
-    for ($j = 0; $j < count($frutas); $j++) {
+$frutas2 = [];
 
+for ($i = 0; $i < count($frutas); $i++) {
+   $valor = $frutas[$i];
+   $duplicado = false;
+   
+   
+    for ($j = 0; $j < count($frutas2); $j++) {
+        if ($valor == $frutas2[$j]) {
+            $duplicado = true;
+break;
+
+        }
     }
+        if (!$duplicado){
+            $frutas2[] = $valor;
+        }
 }
 
+
 echo "Frutas: ";
-for ($i = 0; $i < count($frutas); $i++) {
-    echo $frutas[$i] . " ";
+for ($i = 0; $i < count($frutas2); $i++) {
+    echo $frutas2[$i] . ", ";
 } 
 
+echo "<br> <br>";
+
+
+//--------------------------------------------------------------------------------------------------------------------------
+//Contar os valores duplicados de um array
 
