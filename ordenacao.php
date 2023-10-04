@@ -2,7 +2,7 @@
 //Encontrar o maior valor em um conjunto de numeros em um array
 //Exibir esse valor ao final para o usuario 
 
-
+/* -----------------------------------------------------------
 $nums = [500, 999, 17, 7, 100, 32732, 1, 77, 54, 277]; //array de numeros 
 $max = $nums[0];       //inicializa o maior numero com o primeiro elemento da array, ou seja: 500
 $min = $nums[0];
@@ -25,7 +25,7 @@ for ($i= 0; $i < count($nums); $i++ ) {
 echo " O maior numero da array e: {$max} <br> <br>";
 
 echo " O menor numero da array e: {$min} <br> <br>";
-
+*/ 
 
 /*
 2- por meio da tecnica de ordenacao bubble sort,
@@ -49,7 +49,9 @@ for ($i= 0; $i < count($nums); $i++ ) {
 
 echo "array crescente: {$a} <br>"; 
   
-*/
+
+//////////////////////////////////////////////////////////
+
 
 
 //--------------------------------------------------------------------------------------------------
@@ -125,6 +127,40 @@ for ($i = 0; $i < count($frutas2); $i++) {
 echo "<br> <br>";
 
 
-//--------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------------------
 //Contar os valores duplicados de um array
+Utilizar o mesmo exercicio e criar uma funcao "ordenacao" que recebe dois parametros 
+(array, sttring) para ordenar o array de frutas (1ro param) em ordem crescente (ASC) ou decrescente(DESC)
+Dica: sort, usort, asort, ksort, rsort ... devem ser utilizados dentro da funcao ordenacao 
+*/
+
+$frutas = [
+    "maçã",
+    "banana",
+    "laranja",
+    "banana",
+    "uva",
+    "maçã",
+    "maçã",
+];
+
+$newFrutas = [];
+for($i = 0; $i < count($frutas); $i++) {
+    $frutaAtual = $frutas[$i]; // maca
+
+    if (!isset($newFrutas[$frutaAtual])) {
+        $newFrutas[$frutaAtual] = 1; // [maca => 1]
+    } else {
+        $newFrutas[$frutaAtual] += 1; // [maca => 3]
+    }
+}
+
+
+
+foreach ($newFrutas as $fruta => $quantidade) {
+echo "{$quantidade} {$fruta}, "; 
+}
+
+ 
+
 
