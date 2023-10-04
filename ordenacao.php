@@ -161,6 +161,34 @@ foreach ($newFrutas as $fruta => $quantidade) {
 echo "{$quantidade} {$fruta}, "; 
 }
 
- 
+ function ordenacao($frutas, $ordem) {
+    if ($ordem === "ASC") {
+        asort($frutas);
+    } elseif ($ordem === "DESC") {
+        arsort($frutas);
+    } else {
+        echo "Ordem inválida. Use 'ASC' ou 'DESC'.";
+        return;
+    }
+
+    foreach ($frutas as $fruta => $quantidade) {
+        echo "{$quantidade} {$fruta}, ";
+    }
+}
+
+$frutas = [
+    "maçã",
+    "banana",
+    "laranja",
+    "banana",
+    "uva",
+    "maçã",
+    "maçã",
+];
+
+ordenacao($frutas, "ASC"); // Ordenar em ordem crescente
+echo "<br>";
+ordenacao($frutas, "DESC"); // Ordenar em ordem decrescente
+
 
 
