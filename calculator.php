@@ -11,7 +11,7 @@ perc (percentual desconto)
 perc+ (percentual acrécimo)
 */
 
-$value = "4";
+$value = "3";
 $value2 = "2";
 $operation = "numpar";
 $result = 0 ;
@@ -42,7 +42,7 @@ if ($operation == "numpar" ) {
     $saopares = ($par == 0 && $par2 == 0) ; // true || false
 
     if ($saopares) {
-        echo "Os valores informados são pares.  ";
+        echo "Os valores informados são pares $value e $value2  ";
     }   
 }  
 

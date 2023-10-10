@@ -132,7 +132,7 @@ echo "<br> <br>";
 Utilizar o mesmo exercicio e criar uma funcao "ordenacao" que recebe dois parametros 
 (array, sttring) para ordenar o array de frutas (1ro param) em ordem crescente (ASC) ou decrescente(DESC)
 Dica: sort, usort, asort, ksort, rsort ... devem ser utilizados dentro da funcao ordenacao 
-*/
+
 
 $frutas = [
     "maçã",
@@ -161,10 +161,12 @@ foreach ($newFrutas as $fruta => $quantidade) {
 echo "{$quantidade} {$fruta}, "; 
 }
 
- function ordenacao($frutas, $ordem) {
-    if ($ordem === "ASC") {
+
+
+function ordenacao($frutas, $ordem) {
+    if ($ordem == "ASC") {
         asort($frutas);
-    } elseif ($ordem === "DESC") {
+    } elseif ($ordem == "DESC") {
         arsort($frutas);
     } else {
         echo "Ordem inválida. Use 'ASC' ou 'DESC'.";
@@ -176,6 +178,15 @@ echo "{$quantidade} {$fruta}, ";
     }
 }
 
+
+ordenacao($frutas, "ASC"); // Ordenar em ordem crescente
+echo "<br>";
+ordenacao($frutas, "DESC"); // Ordenar em ordem decrescente
+
+*/
+
+
+
 $frutas = [
     "maçã",
     "banana",
@@ -184,11 +195,43 @@ $frutas = [
     "uva",
     "maçã",
     "maçã",
+    "laranja",
+    "banana",
 ];
 
-ordenacao($frutas, "ASC"); // Ordenar em ordem crescente
+$newFrutas = [];
+for($i = 0; $i < count($frutas); $i++) {
+    $frutaAtual = $frutas[$i]; // maca
+
+    if (!isset($newFrutas[$frutaAtual])) {
+        $newFrutas[$frutaAtual] = 1; // [maca => 1]
+    } else {
+        $newFrutas[$frutaAtual] += 1; // [maca => 3]
+    }
+}
+
+foreach ($newFrutas as $fruta => $quantidade) {
+echo "{$quantidade} {$fruta}, "; 
+}
+
+function ordenacao($frutas, $ordem) {
+    if ($ordem == "ASC") {
+        asort($frutas);
+    } elseif ($ordem == "DESC") {
+        arsort($frutas);
+    } else {
+        echo "Ordem inválida. Use 'ASC' ou 'DESC'.";
+        return;
+    }
+
+    foreach ($frutas as $fruta => $quantidade) {
+        echo "{$quantidade} {$fruta}, ";
+    }
+}
+
+
+
 echo "<br>";
-ordenacao($frutas, "DESC"); // Ordenar em ordem decrescente
-
-
-
+ordenacao($newFrutas, "ASC"); // Ordenar em ordem crescente
+echo "<br>";
+ordenacao($newFrutas, "DESC"); // Ordenar em ordem decrescente
