@@ -210,10 +210,6 @@ for($i = 0; $i < count($frutas); $i++) {
     }
 }
 
-foreach ($newFrutas as $fruta => $quantidade) {
-echo "{$quantidade} {$fruta}, "; 
-}
-
 function ordenacao($frutas, $ordem) {
     if ($ordem == "ASC") {
         asort($frutas);
@@ -229,9 +225,6 @@ function ordenacao($frutas, $ordem) {
     }
 }
 
-
-
+ordenacao($newFrutas, "ASC"); 
 echo "<br>";
-ordenacao($newFrutas, "ASC"); // Ordenar em ordem crescente
-echo "<br>";
-ordenacao($newFrutas, "DESC"); // Ordenar em ordem decrescente
+ordenacao($newFrutas, "DESC"); 
