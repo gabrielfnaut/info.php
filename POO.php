@@ -1,57 +1,84 @@
 <?php
 // OOP || POO
-//private, public e protected
+// funcoes ||  metodos
+//  objeto||classe
+//  propriedades || atributos
+class Carro {
+    const NRO_CHASSI = 'a4s5d65asd4564das65asd';
+    private $marca;
+    protected $modelo;
+    public $ano;
+
+    private function ligar($chave, $cartao) {
+        if(true){}
+        if(true){}
+    }
+
+    protected function trocarMarcha() {
+    }
+
+    private function arrumarMotor() {
+        $this->ligar(); // 
+        self::NRO_CHASSI; // 'a4s5d65asd4564das65asd'
+    }
+}
+
+// $carro = new Carro();
+//  $carro->ligar($chave, $cartao);
+
+
+
+
 
 
 class Pessoa {
     public $nome;
-    protected $cpf;
-    public $altura; 
-    public $peso;
-    public $pernas;
-    public $bracos;
-    public $cabeca;
-    public $rosto;
-    public $olhos;
-    public $boca;
+    public $idade;
+    public $sexo;
+    public $nomeMae;
+    public $nomePai;
+    public $estadoCivil;
+    public $profissao;
+    public $escolaridade;
+    public $telefone;
 
-    
-    public function falar($boca) {
-        echo "A pessoa esta falando. <br>";
-    }
-
-    public function piscar($olhos) {
-        echo "A pessoa esta piscando. <br>";
-    }
-
-    public function andar($pernas) {
-        echo "A pessoa esta andando. <br>";
-    }
-
-    public function __construct($nome, $cpf, $altura, $peso, $pernas, $bracos, $cabeca, $rosto, $olhos, $boca,){
+    public function __construct($nome = "Beto", $idade, $sexo, $nomeMae, $nomePai, $estadoCivil, $profissao, $escolaridade, $telefone ="") {
         $this->nome = $nome;
-        $this->cpf = $cpf;
-        $this->altura = $altura;
-        $this->peso = $peso;
-        $this->pernas = $pernas;
-        $this->bracos = $bracos;
-        $this->cabeca = $cabeca;
-        $this->rosto = $rosto;
-        $this->olhos = $olhos;
-        $this->boca = $boca;
-
+        $this->idade = $idade;
+        $this->sexo = $sexo;
+        $this->nomeMae = $nomeMae;
+        $this->nomePai = $nomePai;
+        $this->estadoCivil = $estadoCivil;
+        $this->profissao = $profissao;
+        $this->escolaridade = $escolaridade;
+        $this->telefone = $telefone;
     }
 
+    public function dormir() {}
+    public function acordar() {}
+    public function caminhar() {}
+    public function falar() {}
 
-    public function __soTring() {
+    public function __toString() {
+        
+        if(true) {
+
+        }
+
         return $this;
     }
+
 }
 
-$nome = "gab";
+$nome = "Joao do Caminhao";
+$idade = "22";
+$sexo = "M";
+$nomeMae = "Joana do Kombi";
+$nomePai = "José do Fusca";
+$estadoCivil = "Solteiro";
+$profissao = "Programador";
+$escolaridade = "Superior Completo";
+$telefone = "54912345678";
 
-$pessoa = new Pessoa($nome, $cpf, $altura, $peso, $pernas, $bracos, $cabeca, $rosto, $olhos, $boca,);
-$pessoa->andar("pernas");
-$pessoa->falar("boca");
-$pessoa->piscar("olhos");
-echo $pessoa; 
+$pessoa = new Pessoa($nome, $idade, $sexo, $nomeMae, $nomePai, $estadoCivil, $profissao, $escolaridade, $telefone);
+echo $pessoa; // faz carteira
