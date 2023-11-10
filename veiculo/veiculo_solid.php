@@ -66,7 +66,7 @@ class Moto implements IVeiculo {
     }
 }
 
-$cahve = "xyz";
+$chave = "xyz";
 
 $carro = new Carro();
 $carro->dirigir($cahve);

@@ -1,6 +1,5 @@
 <?php
 
-
 interface IVeiculo {
     public function dirigir($chave);
 }
@@ -18,28 +17,19 @@ class Veiculo {
 }
 
 
-class Carro implements IVeiculo {
-    public $chave = "chave_presencial";
-    public $airbag = "motorista_carona";
+class Moto implements IVeiculo {
+    public $chave = "chave_normal";
 
     public function dirigir($chave) {
         $this->chave = $chave;
         echo "estou andando... {$this->chave}<br>";
     }
-    
-    public function setAirBag($airbag) {
-        $this->airbag = $airbag;
-        echo "o airbag é... {$this->airbag}<br>";
-    }
-    
 }
 
 $chave = "xyz";
 
-$carro = new Carro();
-$carro->dirigir($cahve);
-$carro-setAirBag("airbag_lateral");
+$moto = new Moto();
+$moto->dirigir($cahve);
 
 $veiculo = new Veiculo();
-echo $veiculo->locomover($carro);
-
+echo $veiculo->locomover($moto);
