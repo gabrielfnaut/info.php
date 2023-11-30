@@ -1,7 +1,5 @@
 <?php
 
-
-
 $dataatual = date ('d/m/Y  H:i:s'); // 22/08/2023  20:06:32
 
 $acrescimos = 5;
@@ -105,4 +103,6 @@ if ($total <= 0) {
 }
 
 echo "o tempo de jogo é de: {$tempodojogo} minutos";
+
+
 
